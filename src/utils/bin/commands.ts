@@ -16,9 +16,8 @@ export const help = async (args: string[]): Promise<string> => {
   }
   return `Welcome! Here are all the available commands:
 \n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+
+[ctrl+l]/clear: clear terminal.
 `;
 };
 
@@ -30,8 +29,14 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
+  return `Hi, I am ${config.name}. Welcome to my website!
+A passionate software developer who loves turning ideas into reality through clean, efficient code. With a B.Tech in Computer Science and a role at Tata Technologies as a Graduate Engineer Trainee, I thrive on solving complex problems and building scalable applications.
+
+My tech stack? JavaScript, React, Node.js, Tailwind, Java, Maven, Hibernate, and Spring & springboot—basically, everything needed to craft seamless user experiences and powerful backend systems. Whether it's designing sleek interfaces or optimizing databases, I enjoy every part of the development journey.
+
+But hey, I’m not all about code! Off the screen, you’ll find me playing basketball, jamming on the tabla and drums, or lost in music. I believe creativity fuels innovation, and I bring that same energy into my projects.
+Let’s build something awesome together! Drop me a message, and let’s connect. 🚀<a href="https://music.apple.com/library/playlist/p.O1kz87VF8LaRKaV" target="_blank" rel="noopener noreferrer">🎧</a>🏀
+
 More about me:
 'sumfetch' - short summary.
 'resume' - my latest resume.
@@ -44,18 +49,19 @@ export const resume = async (args: string[]): Promise<string> => {
 };
 
 // Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
-};
+// export const donate = async (args: string[]): Promise<string> => {
+//   return `thank you for your interest.
+// here are the ways you can support my work:
+// - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
+// - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
+// `;
+// };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+  const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${config.email}`;
+  window.open(gmailURL, '_blank');
+  return `Redirecting you to Parths Gmail...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
@@ -81,14 +87,20 @@ export const duckduckgo = async (args: string[]): Promise<string> => {
   return `Searching duckduckgo for ${args.join(' ')}...`;
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
 export const reddit = async (args: string[]): Promise<string> => {
   window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
   return `Searching reddit for ${args.join(' ')}...`;
+};
+
+export const music = async (args: string[]): Promise<string> => {
+  return `Welcome! Chill and Jam for a while : 
+  <a href="https://music.apple.com/library/playlist/p.O1kz87VF8LaRKaV" target="_blank" rel="noopener noreferrer">❆ - Cultured</a>
+  <a href="https://music.apple.com/library/playlist/p.6xZa3eVuYmWDNWv" target="_blank" rel="noopener noreferrer">♚ - DHH</a>
+  <a href="https://music.apple.com/library/playlist/p.6xZagKvuYmWDNWv" target="_blank" rel="noopener noreferrer">¥ - Indie</a>`;
+};
+
+export const home = async (args: string[]): Promise<string> => {
+  return banner([]);
 };
 
 // Typical linux commands
@@ -117,22 +129,6 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
-
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
   return `Permission denied: with little power comes... no responsibility? `;
@@ -141,15 +137,12 @@ export const sudo = async (args?: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
-
+██████╗  █████╗ ██████╗ ████████╗██╗  ██╗    ██╗      █████╗ ███╗   ██╗ ██████╗  █████╗ ██╗     ██╗ █████╗ 
+██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██║  ██║    ██║     ██╔══██╗████╗  ██║██╔════╝ ██╔══██╗██║     ██║██╔══██╗
+██████╔╝███████║██████╔╝   ██║   ███████║    ██║     ███████║██╔██╗ ██║██║  ███╗███████║██║     ██║███████║
+██╔═══╝ ██╔══██║██╔══██╗   ██║   ██╔══██║    ██║     ██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ██║██╔══██║
+██║     ██║  ██║██║  ██║   ██║   ██║  ██║    ███████╗██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗██║██║  ██║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.

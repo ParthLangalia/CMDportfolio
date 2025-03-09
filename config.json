@@ -1,21 +1,17 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "readmeUrl": "https://raw.githubusercontent.com/ParthLangalia/ParthLangalia/refs/heads/main/readme.md",
+  "title": "Personal Portfolio",
+  "name": "Parth Langalia",
+  "ascii": "Portfolio",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "ParthLangalia",
+    "linkedin": "parth-langalia-251277256"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
-  "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
-  "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
-  },
+  "email": "langaliaparth467@gmail.com",
+  "ps1_hostname": "dev",
+  "ps1_username": "Explorer",
+  "repo": "https://github.com/ParthLangalia/NotePad",
+  "resume_url": "https://drive.google.com/file/d/1ERBbC0bfHEPNTYmg7w-VugAmMkIwhvPh/view?usp=sharing",
   "colors": {
     "light": {
       "background": "#FBF1C9",
