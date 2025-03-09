@@ -3,7 +3,7 @@
 A **minimalistic, terminal-style portfolio website** that lets users interact with commands just like in a Linux shell.  
 
 ### 🔗 Live Demo  
-[**View Live Portfolio**](https://your-deployed-url.com)  
+[**View Live Portfolio**](https://portfolio-eosin-nu-84.vercel.app/)  
 
 ---
 
@@ -47,4 +47,25 @@ A **minimalistic, terminal-style portfolio website** that lets users interact wi
 ```bash
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
+
+### 2️⃣ Install dependencies 
+npm install
+### 3️⃣ Run the development server
+npm run dev
+### 4️⃣ Build for production
+npm run build
+
+
+### 🌍 Deployment
+This project is deployed using Vercel.
+
+### 📌 Want to Contribute?
+Feel free to fork this repo, submit PRs, or suggest improvements! 
+Let me know if you need any modifications! 🚀🔥
+
+🎯 Author
+Parth Langalia
+📧 Email: langaliaparth467@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/parth-langalia-251277256/
+
 
