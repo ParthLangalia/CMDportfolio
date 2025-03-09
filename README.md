@@ -43,11 +43,11 @@ A **minimalistic, terminal-style portfolio website** that lets users interact wi
 
 ## 🚀 Installation & Setup  
 
-### 1️⃣ Clone the repository  
 ```bash
+
+### 1️⃣ Clone the repository
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
-
 ### 2️⃣ Install dependencies 
 npm install
 ### 3️⃣ Run the development server
