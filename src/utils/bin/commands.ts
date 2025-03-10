@@ -18,6 +18,7 @@ export const help = async (args: string[]): Promise<string> => {
 \n${c}\n
 
 [ctrl+l]/clear: clear terminal.
+cd: A random book recommendation :)
 `;
 };
 
@@ -120,9 +121,29 @@ fake
 directories`;
 };
 
+// export const cd = async (args: string[]): Promise<string> => {
+//   return `unfortunately, i cannot afford more directories.
+// if you want to help, you can type 'donate'.`;
+// };
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  if (args.length !== 1 || !/^[1-3]$/.test(args[0])) {
+    return 'Usage: cd <number> (where <number> is a single digit from 1 to 3)';
+  }
+
+  const bookUrls: { [key: string]: string } = {
+    '1': 'https://www.goodreads.com/book/show/4671.The_Great_Gatsby',
+    '2': 'https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird',
+    '3': 'https://www.goodreads.com/book/show/40961427-1984',
+  };
+
+  const selectedBook = bookUrls[args[0]];
+
+  if (selectedBook) {
+    window.open(selectedBook, '_blank');
+    return `Here's a book recommended by me`;
+  }
+
+  return 'Invalid input. Enter a number from 1 to 3.';
 };
 
 export const date = async (args: string[]): Promise<string> => {
