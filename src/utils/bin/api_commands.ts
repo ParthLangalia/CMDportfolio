@@ -1,12 +1,12 @@
 // // List of commands that require API calls
 
-import { getQuote } from '../api';
+import { getJoke } from '../api';
 import { getReadme } from '../api';
 import { getWeather } from '../api';
 
-export const quote = async (args: string[]): Promise<string> => {
-  const data = await getQuote();
-  return data.quote;
+export const joke = async (args: string[]): Promise<string> => {
+  const data = await getJoke();
+  return data.joke;
 };
 
 export const readme = async (args: string[]): Promise<string> => {

@@ -15,9 +15,11 @@ export const getWeather = async (city: string) => {
   }
 };
 
-export const getQuote = async () => {
-  const { data } = await axios.get('https://api.quotable.io/random');
+export const getJoke = async () => {
+  const { data } = await axios.get(
+    'https://official-joke-api.appspot.com/jokes/random',
+  );
   return {
-    quote: `“${data.content}” — ${data.author}`,
+    joke: `“${data.setup}” — ${data.punchline}`,
   };
 };
